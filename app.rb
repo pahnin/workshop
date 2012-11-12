@@ -1,7 +1,3 @@
-require "cuba"
-require "sequel"
-DB = Sequel.connect("sqlite://database.db")
-DB[:entry].delete
 entry = DB[:entry]
 Cuba.define do
   on get do
