@@ -1,0 +1,16 @@
+.presentation{
+	width: 80%;
+	height: 100%;
+	float: left;
+	z-index: 0;
+}
+.chat{
+	background: white;
+	float: left;
+	width: 20%;
+	height: 100%;
+	z-index: 10000;
+}
+.reveal .controls{
+	left: 10px;
+}
