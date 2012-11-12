@@ -1,4 +1,5 @@
 entry = DB[:entry]
+Cuba.use Rack::Static, urls: %w(/css /js /lib /plugin), root: "public"
 Cuba.define do
   on get do
   	
@@ -12,12 +13,7 @@ Cuba.define do
 
     on root do
     	
-    	res.write "<a href='/enter'>Enter Comment</a><br>"
-
-       	entry.each do |data|
-
-    		res.write "#{data[:name]} : -#{data[:comment]} <br> <br>"
-    	end
+    	res.write File.read("public/index.html")
 
     end
    end
